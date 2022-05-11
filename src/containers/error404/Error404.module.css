@@ -1,0 +1,30 @@
+.errorMain {
+  width: 100vw;
+}
+
+.errorMain > .errorClass {
+  width: 90%;
+  margin: auto 5%;
+  /* min-height: calc(100vh - 192px); */
+  text-align: center;
+  display: block;
+}
+
+.errorMain > .errorClass > .error404 {
+  font-size: 7em;
+  overflow: hidden;
+  padding-top: 10px 0;
+  margin: 10px 0;
+}
+
+.errorMain > .errorClass p {
+  font-size: 1.4em;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1364px) {
+  .errorMain > .errorClass > .error404 {
+    height: 175px;
+    padding-top: 60px;
+  }
+}
