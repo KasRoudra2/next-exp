@@ -1,13 +1,14 @@
+import Image from "next/image";
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import "./OrganizationList.css";
+import styles from "./OrganizationList.module.css";
 
 const OrganizationList = (props) => {
   const logos = props.logos;
     return (
-      <div className="organizations-main-div">
-        <ul className="dev-icons-orgs">
+      <div className={styles.organizationsMainDiv}>
+        <ul className={styles.devIconsOrgs}>
           {logos.map((logo) => {
             return (
               <OverlayTrigger
@@ -20,10 +21,10 @@ const OrganizationList = (props) => {
                   </Tooltip>
                 }
               >
-                <li className="organizations-inline" name={logo["login"]}>
+                <li className={styles.organizationsInline} name={logo["login"]}>
                   <Fade bottom duration={2000} distance="40px">
-                    <img
-                      className="organizations-img"
+                    <Image
+                      className={styles.organizationsImg}
                       src={logo["avatarUrl"]}
                       alt={logo["login"]}
                     />

@@ -1,23 +1,23 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import {hobbies} from "../../portfolio";
-import "./HobbiesSection.css";
+import styles from "./HobbiesSection.module.css";
 
 const HobbiesSection = (props) => {
 	const theme = props.theme;
     return (
-        <div className="basic-hobbies">
+        <div className={styles.basicHobbies}>
           <Fade bottom duration={2000} distance="40px">
-            <div className="hobbies-heading-div">
-              <div className="hobbies-heading-text-div">
+            <div className={styles.hobbiesHeadingDiv}>
+              <div className={styles.hobbiesHeadingTextDiv}>
                 <h1
-                  className="hobbies-heading-text"
+                  className={styles.hobbiesHeadingText}
                   style={{ color: theme.text }}
                 >
                   {hobbies.title}
                 </h1>
                 <h2 
-                  className="hobbies-subTitle"
+                  className={styles.hobbiesSubTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {hobbies.subTitle}

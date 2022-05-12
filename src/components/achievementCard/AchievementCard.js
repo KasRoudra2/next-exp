@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-import "./AchievementCard.css";
+import styles from "./AchievementCard.module.css";
 
 const AchivementCard = (props) => {
   const { theme, cardInfo } = props;
@@ -8,15 +9,15 @@ const AchivementCard = (props) => {
       win.focus();
   }
   return (
-    <div className="certificate-card">
-      <div className="certificate-image-div">
-        <img src={cardInfo.image} alt="PWA" className="card-image"></img>
+    <div className={styles.certificateCard}>
+      <div className={styles.certificateImageDiv}>
+        <Image src={cardInfo.image} alt="PWA" className={styles.cardImage}></img>
       </div>
-      <div className="certificate-detail-div">
-        <h5 className="card-title" style={{ color: theme.text }}>{cardInfo.title}</h5>
-        <p className="card-subtitle" style={{ color: theme.secondaryText }}>{cardInfo.description}</p>
+      <div className={styles.certificateDetailDiv}>
+        <h5 className={styles.cardTitle} style={{ color: theme.text }}>{cardInfo.title}</h5>
+        <p className={styles.cardSubtitle} style={{ color: theme.secondaryText }}>{cardInfo.description}</p>
       </div>
-      <div className="certificate-card-footer">
+      <div className={styles.certificateCardFooter}>
         {cardInfo.footer.map((v, i) => {
           return <p onClick={() => openUrlInNewTab(v.url)} key={v.url}>{v.name}</p>;
         })}

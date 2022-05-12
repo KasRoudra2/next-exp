@@ -1,7 +1,7 @@
 import React from "react";
 import {Fade} from "react-reveal";
 import { podcastSection } from "../../portfolio";
-import "./Podcast.css";
+import styles from "./Podcast.module.css";
 
 const Podcast = (props) => {
   const theme = props.theme;		
@@ -9,21 +9,21 @@ const Podcast = (props) => {
     return null;
   }
   return (
-      <div className="podcast-main">
-        <div className="podcast-header" align="center">
+      <div className={styles.podcastMain}>
+        <div className={styles.podcastHeader} align="center">
         <Fade bottom duration={1000} distance="20px">
-          <h1 className="podcast-header-title" style={{ color: theme.text}}>{podcastSection.title}</h1>
+          <h1 className={styles.podcastHeaderTitle} style={{ color: theme.text}}>{podcastSection.title}</h1>
           </Fade>
           <Fade left duration={2000}>
           <p
-            className="subTitle podcast-header-subtitle"
+            className={styles.subTitle + " " + styles.podcastHeaderSubtitle}
             style={{ color: theme.secondaryText}}
           >
             {podcastSection.subtitle}
           </p>
           </Fade>
         </div>
-        <div className="podcast-main-div">
+        <div className={styles.podcastMainDiv}>
           {podcastSection.podcast.map((podcastLink, i) => {
             if (!podcastLink) {
               console.log(
@@ -34,7 +34,7 @@ const Podcast = (props) => {
               <div key={i} align="center">
               <Fade bottom duration={2000} distance="40px">
                 <iframe
-                  className="podcast"
+                  className={styles.podcast}
                   src={podcastLink}
                   frameBorder="0"
                   scrolling="no"

@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 import GithubRepoCard from "../githubRepoCard/GithubRepoCard";
 import { Fade } from "react-reveal";
 import {projects} from "../../portfolio";
 import ProjectsData from "../../shared/opensource/projects.json";
 import ProjectsImg from "./ProjectsImg";
-import "./ProjectsSection.css";
+import styles from "./ProjectsSection.module.css";
 
 
 const ProjectsSection = (props) => {
@@ -16,25 +17,25 @@ const ProjectsSection = (props) => {
 
     return (
         <div>
-        <div className="basic-projects">
+        <div className={styles.basicProjects}>
           <Fade bottom duration={2000} distance="40px">
-            <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
-                {/* <img
+            <div className={styles.projectsHeadingDiv}>
+              <div className={styles.projectsHeadingImgDiv}>
+                {/* <Image
 											src={require(`../../assests/images/${projectsHeader["avatar_image_path"]}`)}
 											alt=""
 										/> */}
                 <ProjectsImg theme={theme} />
               </div>
-              <div className="projects-heading-text-div">
+              <div className={styles.projectsHeadingTextDiv}>
                 <h1
-                  className="projects-heading-text"
+                  className={styles.projectsHeadingText}
                   style={{ color: theme.text }}
                 >
                   {projects.title}
                 </h1>
                 <p
-                  className="projects-header-detail-text subTitle"
+                  className={styles.projectsHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {projects["description"]}
@@ -43,7 +44,7 @@ const ProjectsSection = (props) => {
             </div>
           </Fade>
         </div>
-        <div className="repo-cards-div-main">
+        <div className={styles.repoCardsDivMain}>
           {ProjectsData.data.map((repo) => {
             return <GithubRepoCard repo={repo} theme={theme} key={repo.id} />;
           })}

@@ -1,16 +1,16 @@
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import "./SoftwareSkills.css";
+import styles from "./SoftwareSkills.module.css";
 
 const SoftwareSkills = (props) => {
   const { logos } = props;
     return (
       <div>
-        <div className="software-skills-main-div">
-          <ul className="dev-icons">
+        <div className={styles.softwareSkillsMainDiv}>
+          <ul className={styles.devIcons}>
             {/* {skillsSection.softwareSkills.map(skills => {
             return (
-              <li className="software-skill-inline" name={skills.skillName}>
+              <li className={styles.softwareSkillInline} name={skills.skillName}>
                 <i className={skills.fontAwesomeClassname}></i>
               </li>
             );
@@ -26,9 +26,9 @@ const SoftwareSkills = (props) => {
                     </Tooltip>
                   }
                 >
-                  <li className="software-skill-inline" name={logo.skillName}>
+                  <li className={styles.softwareSkillInline} name={logo.skillName}>
                     <span
-                      className="iconify"
+                      className={styles.iconify}
                       data-icon={logo.fontAwesomeClassname}
                       style={logo.style}
                       data-inline="false"

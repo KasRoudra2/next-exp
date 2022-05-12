@@ -1,27 +1,28 @@
+import Image from "next/image";
 import React from "react";
 import { Fade } from "react-reveal";
 import { hobbies } from "../../portfolio";
-import "./HobbiesCard.css";
+import styles from "./HobbiesCard.module.css";
 
 const HobbiesCard = (props) => {
   	const theme = props.theme;
     return (
-      <div className="hobbies-card">
+      <div className={styles.hobbiesCard}>
       <Fade bottom duration={2000} distance="40px">
-       <div className="hobbies-card-body-div">
+       <div className={styles.hobbiesCardBodyDiv}>
           {hobbies.hobbies.map((hobbiesdata) => {
             return (
-              <div className="hobbies-data" key={hobbiesdata.title}>
-              <div className="hobbies-heading">
+              <div className={styles.hobbiesData} key={hobbiesdata.title}>
+              <div className={styles.hobbiesHeading}>
                 <Fade left duration={2000}>
                   <div
-                    className="hobbies-card-title"
+                    className={styles.hobbiesCardTitle}
                     style={{ color: theme.text }}
                   >
                     {hobbiesdata.title}
                   </div>
                   <div
-                    className="hobbies-card-subtitle"
+                    className={styles.hobbiesCardSubtitle}
                     style={{ color: theme.secondaryText }}
                   >
                     {hobbiesdata.description}
@@ -29,9 +30,9 @@ const HobbiesCard = (props) => {
                 </Fade>
                 </div>
                 <Fade right duration={2000}>
-                <div className="hobbies-card-img">
-                  <img
-                    className="hobbies-image"
+                <div className={styles.hobbiesCardImg}>
+                  <Image
+                    className={styles.hobbiesImage}
                     src={require(`../../assets/images/${hobbiesdata["image_path"]}`)}
                     alt={hobbiesdata.title}
                   />

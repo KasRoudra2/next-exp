@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { Component } from "react";
 import { Fade } from "react-reveal";
 import { skills } from "../../portfolio";
@@ -8,7 +9,7 @@ import AppDevelopImg from "./AppDevelopImg";
 import CloudInfraImg from "./CloudInfraImg";
 import DataScienceImg from "./DataScienceImg";
 import SoftwareSkills from "../../components/softwareSkills/SoftwareSkills";
-import "./Skills.css";
+import styles from "./Skills.module.css";
 
 function GetSkillSvg(props) {
   if (props.imageName === "TerminalImg")
@@ -31,10 +32,10 @@ class SkillSection extends Component {
       <div>
         {skills.data.map((skill) => {
           return (
-            <div className="skills-main-div" key={skill.title}>
+            <div className={styles.skillsMainDiv} key={skill.title}>
               <Fade left duration={2000}>
-                <div className="skills-image-div">
-                  {/* <img
+                <div className={styles.skillsImageDiv}>
+                  {/* <Image
                     alt="Ashutosh is Analysing Data"
                     src={require(`../../assests/images/${skill.imagePath}`)}
                   ></img> */}
@@ -42,9 +43,9 @@ class SkillSection extends Component {
                 </div>
               </Fade>
 
-              <div className="skills-text-div">
+              <div className={styles.skillsTextDiv}>
                 <Fade right duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.text }}>
+                  <h1 className={styles.skillsHeading} style={{ color: theme.text }}>
                     {skill.title}
                   </h1>
                 </Fade>
@@ -57,7 +58,7 @@ class SkillSection extends Component {
                       return (
                         <p
                           key={skillSentence}
-                          className="subTitle skills-text"
+                          className={styles.subTitle + " " + styles.skillsText}
                           style={{ color: theme.secondaryText }}
                         >
                           {skillSentence}

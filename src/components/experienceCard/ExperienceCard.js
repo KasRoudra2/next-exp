@@ -1,31 +1,32 @@
+import Image from "next/image";
 import React from "react";
-import "./ExperienceCard.css";
+import styles from "./ExperienceCard.module.css";
 
 const ExperienceCard = (props) => {
     const { theme, experience } = props;
     return (
       <div
-        className="experience-card"
+        className={styles.experienceCard}
         style={{ border: `1px solid ${experience["color"]}`, backgroundColor: theme.headerColor }}
       >
-        <div className="experience-card-logo-div">
-          <img
-            className="experience-card-logo"
+        <div className={styles.experienceCardLogoDiv}>
+          <Image
+            className={styles.experienceCardLogo}
             src={require(`../../assets/images/${experience["logo_path"]}`)}
             alt=""
           />
         </div>
-        <div className="experience-card-body-div">
-          <div className="experience-card-header-div">
-            <div className="experience-card-heading-left">
+        <div className={styles.experienceCardBodyDiv}>
+          <div className={styles.experienceCardHeaderDiv}>
+            <div className={styles.experienceCardHeadingLeft}>
               <h3
-                className="experience-card-title"
+                className={styles.experienceCardTitle}
                 style={{ color: theme.body }}
               >
                 {experience["title"]}
               </h3>
               <p
-                className="experience-card-company"
+                className={styles.experienceCardCompany}
                 style={{ color: theme.dark }}
               >
                 <a
@@ -37,15 +38,15 @@ const ExperienceCard = (props) => {
                 </a>
               </p>
             </div>
-            <div className="experience-card-heading-right">
+            <div className={styles.experienceCardHeadingRight}>
               <p
-                className="experience-card-duration"
+                className={styles.experienceCardDuration}
                 style={{ color: theme.body }}
               >
                 {experience["duration"]}
               </p>
               <p
-                className="experience-card-location"
+                className={styles.experienceCardLocation}
                 style={{ color: theme.dark }}
               >
                 {experience["location"]}
@@ -53,7 +54,7 @@ const ExperienceCard = (props) => {
             </div>
           </div>
           <p
-            className="experience-card-description"
+            className={styles.experienceCardDescription}
             style={{ color: theme.body }}
           >
             {experience["description"]}

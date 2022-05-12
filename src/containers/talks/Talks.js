@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-reveal";
 import { talkSection } from "../../portfolio";
 import TalkCard from "../../components/talkCard/TalkCard";
-import "./Talks.css";
+import styles from "./Talks.module.css";
 
 export default function Talks(props) {
   if (!talkSection.display) {
@@ -10,15 +10,15 @@ export default function Talks(props) {
   }
   const theme=props.theme;
   return (
-  <div className="talks-main">
-      <div className="main" id="talks">
-        <div className="talk-header">
+  <div className={styles.talksMain}>
+      <div className={styles.main} id="talks">
+        <div className={styles.talkHeader}>
         <Fade bottom duration={2000} distance="20px">
-          <h1 className="talk-header-title" style={{ color: theme.text}}>{talkSection.title}</h1>
+          <h1 className={styles.talkHeaderTitle} style={{ color: theme.text}}>{talkSection.title}</h1>
           </Fade>
           <Fade right duration={2000}>
           <p
-            className="subTitle talk-header-subtitle" style={{ color: theme.secondaryText}}
+            className={styles.subTitle + " " + styles.talkHeaderSubtitle} style={{ color: theme.secondaryText}}
           >
             {talkSection.subtitle}
           </p>

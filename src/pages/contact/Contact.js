@@ -2,7 +2,7 @@ import React from "react";
 import { pageEnabled } from "../../portfolio";
 import { Header, TopButton, Footer } from "../../components";
 import { ContactSection, BlogSection, AddressSection, ContactMessage } from "../../containers";
-import "./Contact.css";
+import styles from "./Contact.module.css";
 
 const Contact = (props) => {
     const theme = props.theme;
@@ -10,7 +10,7 @@ const Contact = (props) => {
     	return null;
      }
     return (
-      <div className="main-page">
+      <div className={styles.mainPage}>
         <Header theme={theme} />
         <ContactSection theme={theme} />
         <BlogSection theme={theme} />

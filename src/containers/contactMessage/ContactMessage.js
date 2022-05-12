@@ -3,7 +3,7 @@ import {contactMessage} from "../../portfolio.js";
 import Input from '../../components/input/Input.js';
 import emailjs from "@emailjs/browser";
 import ContactImg from "./ContactImg";
-import "./ContactMessage.css";
+import styles from "./ContactMessage.module.css";
 
 const ContactMessage = (props) => {
     const theme= props.theme;
@@ -53,29 +53,29 @@ const ContactMessage = (props) => {
     }
     return (
         <div id="contact" className="mt-4">
-          <div className="contactMessage-main">
-           <div className="cont-image">
+          <div className={styles.contactMessageMain}>
+           <div className={styles.contImage}>
            <ContactImg theme={theme}/>
            </div>
-            <div className="container">
-                <div className="row">
+            <div className={styles.container}>
+                <div className={styles.row}>
                     <div className="col-md-12 mb-1">
                         <h1><i className="far fa-dot-circle fs-3" style={{ color: theme.imageHighlight }} ></i> <span style={{ color: theme.text }}>Contact Message</span></h1>
                     </div>
                     <div className="col-md-12 mb-3 px-5 pt-4">
-                        <form onSubmit={handleSubmit} className="form-inline justify-content-center" ref={formRef} id="cont-form">
+                        <form onSubmit={handleSubmit} className={styles.formInline + " " + styles.justifyContentCenter} ref={formRef} id="cont-form">
                             <div className="row mb-1">
                                 <Input name="name" type="text" placeholder="Name" height="60px" onChange={handleChange} />
                                 <Input name="email" type="email" placeholder="Email" height="60px" onChange={handleChange} />
                                 <Input name="subject" type="text" placeholder="Subject" height="60px" onChange={handleChange} />
                                 <Input name="message" type="text" placeholder="Message" height="100px" onChange={handleChange} />
                             </div>
-                            <button ref={buttonRef} type="submit" className="btn btn-primary">
+                            <button ref={buttonRef} type="submit" className={styles.btn + " " + styles.btnPrimary}>
                               Send Message
                             </button>
                         </form>
-                        <div className="fade alert alert-success" ref={alertRef}>
-                            <div className="alert-heading">Your message has been sent successfully!</div>
+                        <div className={styles.fade + " " + styles.alert + " " + styles.alertSuccess} ref={alertRef}>
+                            <div className={styles.alertHeading}>Your message has been sent successfully!</div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css";
+import styles from "./Button.module.css";
 
 const onMouseEnter = (event, color, bgColor) => {
   const el = event.target;
@@ -17,7 +17,7 @@ const Button = ({ text, className, href, newTab, theme }) => {
   return (
     <div className={className}>
       <a
-        className="main-button"
+        className={styles.mainButton}
         href={href}
         target={newTab && "_blank"}
         style={{

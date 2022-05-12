@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { splashScreen } from "../../portfolio";
 import { NormalSplash , LottieSplash } from "../../containers";
-//import "./Splash.css";
+//import styles from "./Splash.module.css";
 
 
 const Splash = (props) => {

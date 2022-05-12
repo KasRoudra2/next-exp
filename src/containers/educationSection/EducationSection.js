@@ -1,25 +1,26 @@
+import Image from "next/image";
 import React from "react";
 import { Fade } from "react-reveal";
 import { competitiveSites } from "../../portfolio";
 import EducationImg from "./EducationImg";
 import CompetitiveSites from "../../containers/competitiveSites/CompetitiveSites";
-import "./EducationSection.css";
+import styles from "./EducationSection.module.css";
 
 const EducationSection = (props) => {
     const theme = props.theme;
     return (
-        <div className="basic-education">
+        <div className={styles.basicEducation}>
           <Fade bottom duration={2000} distance="40px">
-            <div className="heading-div">
-              <div className="heading-img-div">
-                {/* <img
+            <div className={styles.headingDiv}>
+              <div className={styles.headingImgDiv}>
+                {/* <Image
 									src={require("../../assests/images/education.svg")}
 									alt=""
 								/> */}
                 <EducationImg theme={theme} />
               </div>
-              <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.text }}>
+              <div className={styles.headingTextDiv}>
+                <h1 className={styles.headingText} style={{ color: theme.text }}>
                   Education
                 </h1>
                 {competitiveSites.display && (<CompetitiveSites theme={theme} />)}

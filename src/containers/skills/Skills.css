@@ -1,36 +1,36 @@
-.skills-main-div {
+.skillsMainDiv {
   display: flex;
   overflow: hidden;
 }
 
-.skills-header {
+.skillsHeader {
   font-size: 60px;
   line-height: normal;
   font-family: "Google Sans Regular";
   text-align: center;
 }
 
-.skills-text {
+.skillsText {
   font-size: 20px;
 }
 
-.skills-text-div {
+.skillsText-div {
   margin-left: 50px;
   font-family: "Google Sans Regular";
 }
 
-.skills-main-div > * {
+.skillsMainDiv > * {
   flex: 1;
   margin-bottom: 30px;
 }
 
-.skills-image-div > * {
+.skillsImageDiv > * {
   max-width: 100%;
   height: auto;
   margin-top: 100px;
 }
 
-.skills-heading {
+.skillsHeading {
   font-size: 56px;
   font-weight: 400;
   font-family: "Google Sans Regular";
@@ -39,47 +39,47 @@
 
 /* Media Query */
 @media (max-width: 1380px) {
-  .skills-heading {
+  .skillsHeading {
     font-size: 40px;
   }
-  .skills-header {
+  .skillsHeader {
     font-size: 50px;
   }
-  /* .skills-image-div > img {
+  /* .skillsImageDiv > img {
     margin-top: 0px;
   } */
 }
 @media (max-width: 768px) {
-  .skills-heading {
+  .skillsHeading {
     font-size: 30px;
     text-align: center;
   }
-  .skills-header {
+  .skillsHeader {
     font-size: 30px;
   }
-  .greeting-text-p {
+  .greetingTextP {
     font-size: 16px;
     line-height: normal;
   }
-  .skills-main-div {
+  .skillsMainDiv {
     flex-direction: column;
   }
-  .skills-text-div {
+  .skillsText-div {
     margin-left: 0px;
     margin: 20px;
   }
-  .skills-text {
+  .skillsText {
     font-size: 16px;
   }
-  .skills-text-subtitle {
+  .skillsText-subtitle {
     font-size: 16px;
     text-align: center;
   }
-  .skills-image-div {
+  .skillsImageDiv {
     /* display: none; */
     order: 2;
   }
-  .skills-image-div > * {
+  .skillsImageDiv > * {
     margin-top: 0px;
   }
 }

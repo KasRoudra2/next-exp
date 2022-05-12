@@ -1,37 +1,38 @@
+import Image from "next/image";
 import React from "react";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
 import { experience } from "../../portfolio.js";
-import "./ExperienceSection.css";
+import styles from "./ExperienceSection.module.css";
 
 const ExperienceSection = (props) => {
     const theme= props.theme;
     return (
-      <div className="basic-experience">
+      <div className={styles.basicExperience}>
           <Fade bottom duration={2000} distance="40px">
-            <div className="experience-heading-div">
-              <div className="experience-heading-img-div">
-                {/* <img
+            <div className={styles.experienceHeadingDiv}>
+              <div className={styles.experienceHeadingImgDiv}>
+                {/* <Image
 									src={require(`../../assests/images/${experience["header_image_path"]}`)}
 									alt=""
 								/> */}
                 <ExperienceImg theme={theme} />
               </div>
-              <div className="experience-heading-text-div">
+              <div className={styles.experienceHeadingTextDiv}>
                 <h1
-                  className="experience-heading-text"
+                  className={styles.experienceHeadingText}
                   style={{ color: theme.text }}
                 >
                   {experience.title}
                 </h1>
                 <h3
-                  className="experience-heading-sub-text"
+                  className={styles.experienceHeadingSubText}
                   style={{ color: theme.text }}
                 >
                   {experience["subtitle"]}
                 </h3>
                 <p
-                  className="experience-header-detail-text subTitle"
+                  className={styles.experienceHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {experience["description"]}

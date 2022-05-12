@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { twitterUsername } from "../../portfolio";
 import Loading from "../loading/Loading";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
-import "./Twitter.css";
+import styles from "./Twitter.module.css";
 
 const renderLoader = () => <Loading />;
 const cantDisplayError =
@@ -21,8 +21,8 @@ const Twitter = () => {
   if (twitterUsername!=="none") {
     return (
       <Suspense fallback={renderLoader()}>
-        <div className="tw-main-div" id="twitter">
-          <div className="centerContent">
+        <div className={styles.twMainDiv} id="twitter">
+          <div className={styles.centerContent}>
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName={twitterUsername}

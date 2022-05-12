@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
-import "./GithubRepoCard.css";
+import styles from "./GithubRepoCard.module.css";
 
 const GithubRepoCard = (props) => {
   const { theme, repo } = props;
@@ -14,14 +14,14 @@ const GithubRepoCard = (props) => {
     <div>
       <Fade bottom duration={2000} distance="40px">
         <div
-          className="repo-card-div"
+          className={styles.repoCardDiv}
           onClick={() => openRepoinNewTab(repo.url)}
           style={{ backgroundColor: theme.jacketColor }}
         >
-          <div className="repo-name-div">
+          <div className={styles.repoNameDiv}>
             <svg
               aria-hidden="true"
-              className="octicon repo-svg"
+              className={styles.octicon + " " + styles.repoSvg}
               height="16"
               role="img"
               viewBox="0 0 12 16"
@@ -33,18 +33,18 @@ const GithubRepoCard = (props) => {
                 d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
               ></path>
             </svg>
-            <p className="repo-name" style={{ color: theme.text }}>
+            <p className={styles.repoName} style={{ color: theme.text }}>
               {repo.name}
             </p>
           </div>
-          <p className="repo-description" style={{ color: theme.secondaryText }}>
+          <p className={styles.repoDescription} style={{ color: theme.secondaryText }}>
             {repo.description}
           </p>
-          <div className="repo-left-stat">
+          <div className={styles.repoLeftStat}>
               <span>
                 <svg
                   aria-hidden="true"
-                  className="octicon repo-star-svg"
+                  className={styles.octicon + " " + styles.repoStarSvg}
                   height="20"
                   role="img"
                   viewBox="0 0 14 16"
@@ -61,7 +61,7 @@ const GithubRepoCard = (props) => {
               <span>
                 <svg
                   aria-hidden="true"
-                  className="octicon repo-star-svg"
+                  className={styles.octicon + " " + styles.repoStarSvg}
                   height="20"
                   role="img"
                   viewBox="0 0 10 16"
@@ -76,26 +76,26 @@ const GithubRepoCard = (props) => {
                 <p style={{ color: theme.text }}>{repo.forkCount}</p>
               </span>
             </div>
-          <div className="repo-details">
+          <div className={styles.repoDetails}>
             <p
-              className="repo-creation-date subTitle"
+              className={styles.repoCreationDate + " " + styles.subTitle}
               style={{ color: theme.secondaryText }}
             >
               Created on {repo.createdAt.split("T")[0]}
             </p>
             <ProjectLanguages
-              className="repo-languages"
+              className={styles.repoLanguages}
               logos={repo.languages}
             />
           </div>
-          {/* <div className="repo-stats">
-          <div className="repo-left-stat">
+          {/* <div className={styles.repoStats}>
+          <div className={styles.repoLeftStat}>
             <span>
-              <div className="language-color" style={{ backgroundColor: repo.node.primaryLanguage.color }}></div>
+              <div className={styles.languageColor} style={{ backgroundColor: repo.node.primaryLanguage.color }}></div>
               <p>{repo.node.primaryLanguage.name}</p>
             </span>
             <span>
-              <svg aria-hidden="true" className="octicon" height="16" role="img" viewBox="0 0 10 16" width="10" fill="rgb(106, 115, 125)" className="repo-star-svg">
+              <svg aria-hidden="true" className={styles.octicon} height="16" role="img" viewBox="0 0 10 16" width="10" fill="rgb(106, 115, 125)" className={styles.repoStarSvg}>
                 <path
                   fillRule="evenodd"
                   d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
@@ -104,13 +104,13 @@ const GithubRepoCard = (props) => {
               <p>{repo.node.forkCount}</p>
             </span>
             <span>
-              <svg aria-hidden="true" className="octicon" height="16" role="img" viewBox="0 0 14 16" width="14" fill="rgb(106, 115, 125)" className="repo-star-svg">
+              <svg aria-hidden="true" className={styles.octicon} height="16" role="img" viewBox="0 0 14 16" width="14" fill="rgb(106, 115, 125)" className={styles.repoStarSvg}>
                 <path fillRule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
               </svg>
               <p>{repo.node.stargazers.totalCount}</p>
             </span>
           </div>
-          <div className="repo-right-stat">
+          <div className={styles.repoRightStat}>
             <p>{repo.node.diskUsage} KB</p>
           </div>
         </div> */}

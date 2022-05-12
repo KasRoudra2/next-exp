@@ -1,17 +1,17 @@
 import React from "react";
-import "./Input.css";
+import styles from "./Input.module.css";
 
 const Input = ({name, type, placeholder, height, onChange}) => {
   return (
     <div className="mb-1 col-md-12 input-main">
-      <div className="form-floating">
+      <div className={styles.formFloating}>
         <textarea
           required
           onChange={onChange}
           placeholder={placeholder}
           name={name}
           type={type}
-          className="form-control form-control-lg"
+          className={styles.formControl + " " + styles.formControlLg}
           style={{height: height}}
         ></textarea>
         <label></label>

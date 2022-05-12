@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import "./BlogCard.css";
+import styles from "./BlogCard.module.css";
 
 const BlogCard = ({blog, theme}) => {
   const [ show, setShow ] = useState(false);
@@ -20,19 +20,19 @@ const BlogCard = ({blog, theme}) => {
   return (
     <Fade bottom duration={2000}>
      <div onClick={() => openUrlInNewTab(blog.url, blog.title)}>
-      <div className="blog-container" style={{backgroundColor: theme.jacketColor}} align="center">
+      <div className={styles.blogContainer} style={{backgroundColor: theme.jacketColor}} align="center">
       <a
-          className="blog-card blog-card-shadow"
+          className={styles.blogCard + " " + styles.blogCardShadow}
           href={blog.url}
         >
-          <h3 className="blog-title" style={{ color : theme.text }}>
+          <h3 className={styles.blogTitle} style={{ color : theme.text }}>
             {blog.title}
           </h3>
-          <p className="small" style={{ color : theme.secondaryText }}>
+          <p className={styles.small} style={{ color : theme.secondaryText }}>
             {blog.description}
           </p>
-          <div className="go-corner">
-            <div className="go-arrow">→</div>
+          <div className={styles.goCorner}>
+            <div className={styles.goArrow}>→</div>
           </div>
           </a>
       </div>

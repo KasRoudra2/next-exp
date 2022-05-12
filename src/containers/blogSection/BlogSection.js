@@ -1,28 +1,29 @@
+import Image from "next/image";
 import React from "react";
 import {Fade} from "react-reveal";
 import { contactPageData } from "../../portfolio.js";
 import BlogsImg from "./BlogsImg";
 import Button from "../../components/button/Button";
-import "./BlogSection.css";
+import styles from "./BlogSection.module.css";
 
 const BlogSection = (props) => {
      const theme = props.theme;
      const blogSection = contactPageData.blogSection;
      return(
-        <div className="basic-contact">
+        <div className={styles.basicContact}>
                     <Fade bottom duration={1000} distance="40px">
-            <div className="blog-heading-div">
-              <div className="blog-heading-text-div">
-                <h1 className="blog-heading-text" style={{ color: theme.text }}>
+            <div className={styles.blogHeadingDiv}>
+              <div className={styles.blogHeadingTextDiv}>
+                <h1 className={styles.blogHeadingText} style={{ color: theme.text }}>
                   {blogSection["title"]}
                 </h1>
                 <p
-                  className="blog-header-detail-text subTitle"
+                  className={styles.blogHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {blogSection["subtitle"]}
                 </p>
-                <div className="blogsite-btn-div">
+                <div className={styles.blogsiteBtnDiv}>
                   <Button
                     text="Visit My Blogsite"
                     newTab={true}
@@ -31,8 +32,8 @@ const BlogSection = (props) => {
                   />
                 </div>
               </div>
-              <div className="blog-heading-img-div">
-                {/* <img
+              <div className={styles.blogHeadingImgDiv}>
+                {/* <Image
 											src={require(`../../assests/images/${blogSection["avatar_image_path"]}`)}
 											alt=""
 										/> */}

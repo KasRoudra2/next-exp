@@ -1,7 +1,7 @@
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import {competitiveSites} from "../../portfolio";
-import "./CompetitiveSites.css";
+import styles from "./CompetitiveSites.module.css";
 
 const CompetitiveSites = (props) => {
     const theme = props.theme;
@@ -9,11 +9,11 @@ const CompetitiveSites = (props) => {
     	return null;
     }	
     return (
-      <div className="competitive-sites-main-div">
-          <h3 className="heading-sub-text" style={{ color: theme.secondaryText }}>
+      <div className={styles.competitiveSitesMainDiv}>
+          <h3 className={styles.headingSubText} style={{ color: theme.secondaryText }}>
                   Basic Qualification and Certifcations
           </h3>
-        <ul className="dev-icons">
+        <ul className={styles.devIcons}>
           {competitiveSites.competitiveSites.map((logo) => {
             return (
               <OverlayTrigger
@@ -26,14 +26,14 @@ const CompetitiveSites = (props) => {
                   </Tooltip>
                 }
               >
-                <li className="competitive-sites-inline" name={logo.siteName}>
+                <li className={styles.competitiveSitesInline} name={logo.siteName}>
                   <a
                     href={logo.profileLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span
-                      className="iconify"
+                      className={styles.iconify}
                       data-icon={logo.iconifyClassname}
                       style={logo.style}
                       data-inline="false"

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { socialMediaLinks } from "../../portfolio";
-import "./SocialMedia.css";
+import styles from "./SocialMedia.module.css";
 
 const IconWrapper = styled.span`
   i {
@@ -15,7 +15,7 @@ const IconWrapper = styled.span`
 const SocialMedia = (props) => {
 	
   return (
-    <div className="social-media-div">
+    <div className={styles.socialMediaDiv}>
       {socialMediaLinks.map((media) => {
         return (
           <a

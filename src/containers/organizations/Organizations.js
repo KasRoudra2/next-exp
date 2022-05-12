@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 import {openSource} from "../../portfolio";
 import OrganizationList from "../../components/organizationList/OrganizationList";
 import OrganizationsData from "../../shared/opensource/organizations.json";
-import "./Organizations.css";
+import styles from "./Organizations.module.css";
 
 const Organizations = (props) => {
     const theme = props.theme;
@@ -12,9 +12,9 @@ const Organizations = (props) => {
     }	
     return (
       <div id="organizations">
-        <div className="organizations-header-div">
+        <div className={styles.organizationsHeaderDiv}>
           <Fade bottom duration={2000} distance="20px">
-            <h1 className="organizations-header" style={{ color: theme.text }}>
+            <h1 className={styles.organizationsHeader} style={{ color: theme.text }}>
               Contributed Organizations
             </h1>
           </Fade>

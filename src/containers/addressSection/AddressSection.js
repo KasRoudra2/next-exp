@@ -1,51 +1,52 @@
+import Image from "next/image";
 import React from "react";
 import {Fade} from "react-reveal";
 import Button from "../../components/button/Button";
 import AddressImg from "./AddressImg";
 import { contactPageData } from "../../portfolio.js";
-import "./AddressSection.css";
+import styles from "./AddressSection.module.css";
 
 const AddressSection = (props) => {
      const theme = props.theme;
      const addressSection = contactPageData.addressSection;
      const phoneSection = contactPageData.phoneSection;
      return(
-        <div className="basic-contact">
+        <div className={styles.basicContact}>
           <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                {/* <img
+            <div className={styles.addressHeadingDiv}>
+              <div className={styles.contactHeadingImgDiv}>
+                {/* <Image
 											src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
 											alt=""
 										/> */}
                 <AddressImg theme={theme} />
               </div>
-              <div className="address-heading-text-div">
+              <div className={styles.addressHeadingTextDiv}>
                 <h1
-                  className="address-heading-text"
+                  className={styles.addressHeadingText}
                   style={{ color: theme.text }}
                 >
                   {addressSection["title"]}
                 </h1>
                 <p
-                  className="contact-header-detail-text subTitle"
+                  className={styles.contactHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {addressSection["subtitle"]}
                 </p>
                 <h1
-                  className="address-heading-text"
+                  className={styles.addressHeadingText}
                   style={{ color: theme.text }}
                 >
                   {phoneSection["title"]}
                 </h1>
                 <p
-                  className="contact-header-detail-text subTitle"
+                  className={styles.contactHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {phoneSection["subtitle"]}
                 </p>
-                <div className="address-btn-div">
+                <div className={styles.addressBtnDiv}>
                   <Button
                     text="Visit on Google Maps"
                     newTab={true}

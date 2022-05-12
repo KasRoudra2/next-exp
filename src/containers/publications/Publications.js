@@ -2,7 +2,7 @@ import React from "react";
 import {Fade} from "react-reveal";
 import { publications } from "../../portfolio.js";
 import PublicationCard from "../../components/publicationCard/PublicationCard";
-import "./Publications.css";
+import styles from "./Publications.module.css";
 
 const Publications = (props) => {
 //	const pubs= publications.data;
@@ -12,18 +12,18 @@ const Publications = (props) => {
   }
 	return(
 	<div>
-	    <div className="basic-projects">
+	    <div className={styles.basicProjects}>
           <Fade bottom duration={2000} distance="40px">
-            <div className="publications-heading-div">
-              <div className="publications-heading-text-div">
+            <div className={styles.publicationsHeadingDiv}>
+              <div className={styles.publicationsHeadingTextDiv}>
                 <h1
-                  className="publications-heading-text"
+                  className={styles.publicationsHeadingText}
                   style={{ color: theme.text }}
                 >
                   {publications.title}
                 </h1>
                 <p
-                  className="projects-header-detail-text subTitle"
+                  className={styles.projectsHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {publications["description"]}
@@ -32,7 +32,7 @@ const Publications = (props) => {
             </div>
           </Fade>
         </div>
-        <div className="repo-cards-div-main">
+        <div className={styles.repoCardsDivMain}>
           {publications.publications.data.map((pubs) => {
             return <PublicationCard publication={pubs} theme={theme} key={pubs.title}/>;
           })}

@@ -1,7 +1,7 @@
 import React from "react";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
 import { certifications } from "../../portfolio";
-import "./Achievement.css";
+import styles from "./Achievement.module.css";
 
 const Achievement = (props) => {
   // function openUrlInNewTab(url) {
@@ -13,17 +13,17 @@ const Achievement = (props) => {
   	return null;
   }	
   return (
-    <div className="main" id="achievements">
-      <div className="achievement-main-div">
-        <div className="achievement-header">
-          <h1 className="heading achievement-heading" style={{ color: theme.text }}>
+    <div className={styles.main} id="achievements">
+      <div className={styles.achievementMainDiv}>
+        <div className={styles.achievementHeader}>
+          <h1 className={styles.heading + " " + styles.achievementheading} style={{ color: theme.text }}>
             {certifications.title}
           </h1>
-          <p className="subTitle achievement-subtitle" style={{ color: theme.secondaryText }}>
+          <p className={styles.subTitle + " " + styles.achievementSubtitle} style={{ color: theme.secondaryText }}>
             {certifications.subtitle}
           </p>
         </div>
-        <div className="achievement-cards-div">
+        <div className={styles.achievementCardsDiv}>
           {certifications.certifications.map((card) => {
             return (
               <AchievementCard

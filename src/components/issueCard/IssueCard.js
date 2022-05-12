@@ -1,7 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import "./IssueCard.css";
+import styles from "./IssueCard.module.css";
 
 const IssueCard = (props) => {
     const issue = props.issue;
@@ -42,8 +43,8 @@ const IssueCard = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="assigned-to-img"
+            <Image
+              className={styles.assignedToImg}
               src={issue["assignees"]["nodes"][0]["avatarUrl"]}
               alt=""
             />
@@ -57,22 +58,22 @@ const IssueCard = (props) => {
     return (
       <Fade bottom duration={2000} distance="40px">
         <div
-          className="issue-card"
+          className={styles.issueCard}
           style={{
             backgroundColor: bgColor,
             border: `1px solid ${iconPR.style.color}`,
           }}
         >
-          <div className="issue-top">
-            <div className="issue-header">
+          <div className={styles.issueTop}>
+            <div className={styles.issueHeader}>
               <span
-                className="iconify issue-icons"
+                className={styles.iconify + " " + styles.issueIcons}
                 data-icon={iconPR.iconifyClass}
                 style={iconPR.style}
                 data-inline="false"
               ></span>
-              <div className="issue-title-header">
-                <p className="issue-title">
+              <div className={styles.issueTitleHeader}>
+                <p className={styles.issueTitle}>
                   <a
                     href={issue["url"]}
                     target="_blank"
@@ -81,12 +82,12 @@ const IssueCard = (props) => {
                     {issue["title"]}
                   </a>
                 </p>
-                <p className="issue-subtitle">{subtitleString}</p>
+                <p className={styles.issueSubtitle}>{subtitleString}</p>
               </div>
             </div>
-            {/* <div className="files-changed-header">
+            {/* <div className={styles.filesChangedHeader}>
 							<p
-								className="files-changed-text"
+								className={styles.filesChangedText}
 								style={{ backgroundColor: iconPR.style.color }}
 							>
 								{pullRequest["changedFiles"]}
@@ -94,9 +95,9 @@ const IssueCard = (props) => {
 							<p className="files-changed-text-2">Files Changed</p>
 						</div> */}
           </div>
-          <div className="issue-down">
-            <div className="assignee-repo">
-              <p className="parent-repo">
+          <div className={styles.issueDown}>
+            <div className={styles.assigneeRepo}>
+              <p className={styles.parentRepo}>
                 Repository:{" "}
                 <a
                   style={{ color: iconPR.style.color }}
@@ -106,24 +107,24 @@ const IssueCard = (props) => {
                   {issue["repository"]["name"]}
                 </a>
               </p>
-              <div className="assignee-info">
-                {/* <p className="additions-files">
+              <div className={styles.assigneeInfo}>
+                {/* <p className={styles.additionsFiles}>
 									<strong>{pullRequest["additions"]} + </strong>
 								</p>
-								<p className="deletions-files">
+								<p className={styles.deletionsFiles}>
 									<strong>{pullRequest["deletions"]} - </strong>
 								</p> */}
                 {assignee}
               </div>
             </div>
-            <div className="owner-img-div">
+            <div className={styles.ownerImgDiv}>
               <a
                 href={issue["repository"]["owner"]["url"]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  className="owner-img"
+                <Image
+                  className={styles.ownerImg}
                   src={issue["repository"]["owner"]["avatarUrl"]}
                   alt=""
                 />

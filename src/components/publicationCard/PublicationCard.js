@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import "./PublicationCard.css";
+import styles from "./PublicationCard.module.css";
 
 const PublicationCard = (props) => {
   const { theme, publication } = props;
@@ -12,22 +12,22 @@ const PublicationCard = (props) => {
   return (
       <Fade bottom duration={2000} distance="40px">
         <div
-          className="publication-card-div"
+          className={styles.publicationCardDiv}
           key={publication.id}
           onClick={() => openpublicationinNewTab(publication.url)}
           style={{ backgroundColor: theme.headerColor }}
         >
-          <div className="publication-name-div">
-            <p className="publication-name" style={{ color: theme.text }}>
+          <div className={styles.publicationNameDiv}>
+            <p className={styles.publicationName} style={{ color: theme.text }}>
               {publication.name}
             </p>
           </div>
-          <p className="publication-description" style={{ color: theme.text }}>
+          <p className={styles.publicationDescription} style={{ color: theme.text }}>
             {publication.description}
           </p>
-          <div className="publication-details">
+          <div className={styles.publicationDetails}>
             <p
-              className="publication-creation-date subTitle"
+              className={styles.publicationCreationDate + " " + styles.subTitle}
               style={{ color: theme.secondaryText }}
             >
               Published on {publication.createdAt.split("T")[0]}

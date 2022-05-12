@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {contactPageData} from "../../portfolio";
 import {Fade} from "react-reveal";
 import UserData from "../../shared/opensource/user.json";
-import "./AboutMe.css";
+import styles from "./AboutMe.module.css";
 
 const AboutMe = (props) => {
   if (UserData.data.isHireable) {
@@ -16,38 +17,38 @@ const AboutMe = (props) => {
   	return null;
   }
   return (
-  <div className="about-main">
+  <div className={styles.aboutMain}>
     <Fade bottom duration={2000} distance="20px">
-      <div className="main" id="contact" align="center">
-        <h1 className="prof-title" style={{ color: theme.text}}>Reach Out to me!</h1>
-        <div className="row" align="center">
+      <div className={styles.main} id="contact" align="center">
+        <h1 className={styles.profTitle} style={{ color: theme.text}}>Reach Out to me!</h1>
+        <div className={styles.row} align="center">
           <div className="main-content-UserData.dataile">
-            <div className="blog-header">
+            <div className={styles.blogHeader}>
             <Fade right duration={2000}>
-              <p className="subTitle blog-sub" style={{ color: theme.secondaryText}}>{contactPageData.contactSection.description}</p>
+              <p className={styles.subTitle + " " + styles.blogsub} style={{ color: theme.secondaryText}}>{contactPageData.contactSection.description}</p>
               </Fade>
             </div>
             {UserData.data.avatarUrl !== null && (
-            <div className="image-content-profile" style={{ padding: "20px"}}>
+            <div className={styles.imageContentProfile} style={{ padding: "20px"}}>
             <Fade left duration={2000}>
-              <img
+              <Image
               src={UserData.data.avatarUrl}
               alt={UserData.data.name}
-              className="profile-image"
+              className={styles.profileImage}
               />
               </Fade>
             </div>
             )}
           {UserData.data.bio !== null && (
             <Fade left duration={2000}>
-            <h2 className="bio-text" style={{ color: theme.imageHighlight}}>"{UserData.data.bio}"</h2>
+            <h2 className={styles.bioText} style={{ color: theme.imageHighlight}}>"{UserData.data.bio}"</h2>
             </Fade>
            )}
             {UserData.data.location !== null && (
-              <div className="location-div" style={{color: theme.secondaryText}}>
-                <div className="desc-prof">
+              <div className={styles.locationDiv} style={{color: theme.secondaryText}}>
+                <div className={styles.descProf}>
                   <svg
-                    className="loc-im"
+                    className={styles.locIm}
                     viewBox="-0.5 -2 20 19"
                     version="1.1"
                     aria-hidden="true"
@@ -62,9 +63,9 @@ const AboutMe = (props) => {
                 </div>
               </div>
             )}
-            <div className="opp-div">
+            <div className={styles.oppDiv}>
             <Fade left duration={2000}>
-              <span className="desc-prof" style={{ color: theme.text}}>
+              <span className={styles.descProf} style={{ color: theme.text}}>
                 Open for opportunities: {UserData.data.hireable}
               </span>
               </Fade>

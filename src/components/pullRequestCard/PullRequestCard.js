@@ -1,7 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import "./PullRequestCard.css";
+import styles from "./PullRequestCard.module.css";
 
 const PullRequestCard = (props) => {
     const pullRequest = props.pullRequest;
@@ -51,8 +52,8 @@ const PullRequestCard = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="merge-by-img"
+            <Image
+              className={styles.mergeByImg}
               src={pullRequest["mergedBy"]["avatarUrl"]}
               alt=""
             />
@@ -66,22 +67,22 @@ const PullRequestCard = (props) => {
     return (
       <Fade bottom duration={2000} distance="40px">
         <div
-          className="pull-request-card"
+          className={styles.pullRequestCard}
           style={{
             backgroundColor: bgColor,
             border: `1px solid ${iconPR.style.color}`,
           }}
         >
-          <div className="pr-top">
-            <div className="pr-header">
+          <div className={styles.prTop}>
+            <div className={styles.prHeader}>
               <span
-                className="iconify pr-icons"
+                className={styles.iconify + " " + styles.prIcons}
                 data-icon={iconPR.iconifyClass}
                 style={iconPR.style}
                 data-inline="false"
               ></span>
-              <div className="pr-title-header">
-                <p className="pr-title">
+              <div className={styles.prTitleHeader}>
+                <p className={styles.prTitle}>
                   <a
                     href={pullRequest["url"]}
                     target="_blank"
@@ -90,12 +91,12 @@ const PullRequestCard = (props) => {
                     {pullRequest["title"]}
                   </a>
                 </p>
-                <p className="pr-subtitle">{subtitleString}</p>
+                <p className={styles.prSubtitle}>{subtitleString}</p>
               </div>
             </div>
-            <div className="files-changed-header">
+            <div className={styles.filesChangedHeader}>
               <p
-                className="files-changed-text"
+                className={styles.filesChangedText}
                 style={{ backgroundColor: iconPR.style.color }}
               >
                 {pullRequest["changedFiles"]}
@@ -103,9 +104,9 @@ const PullRequestCard = (props) => {
               <p className="files-changed-text-2">Files Changed</p>
             </div>
           </div>
-          <div className="pr-down">
-            <div className="changes-repo">
-              <p className="parent-repo">
+          <div className={styles.prDown}>
+            <div className={styles.changesRepo}>
+              <p className={styles.parentRepo}>
                 Repository:{" "}
                 <a
                   style={{ color: iconPR.style.color }}
@@ -115,24 +116,24 @@ const PullRequestCard = (props) => {
                   {pullRequest["baseRepository"]["name"]}
                 </a>
               </p>
-              <div className="changes-files">
-                <p className="additions-files">
+              <div className={styles.changesFiles}>
+                <p className={styles.additionsFiles}>
                   <strong>{pullRequest["additions"]} + </strong>
                 </p>
-                <p className="deletions-files">
+                <p className={styles.deletionsFiles}>
                   <strong>{pullRequest["deletions"]} - </strong>
                 </p>
                 {mergedBy}
               </div>
             </div>
-            <div className="owner-img-div">
+            <div className={styles.ownerImgDiv}>
               <a
                 href={pullRequest["baseRepository"]["owner"]["url"]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  className="owner-img"
+                <Image
+                  className={styles.ownerImg}
                   src={pullRequest["baseRepository"]["owner"]["avatarUrl"]}
                   alt=""
                 />

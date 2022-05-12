@@ -1,10 +1,10 @@
 import React from "react";
-import "./loading.css";
+import styles from "./Loading.module.css";
 
 const Loading = () => {
   return (
-    <div className="centerContent">
-      <div className="sk-circle">
+    <div className={styles.centerContent}>
+      <div className={styles.skCircle}>
         <div className="sk-circle1 sk-child"></div>
         <div className="sk-circle2 sk-child"></div>
         <div className="sk-circle3 sk-child"></div>

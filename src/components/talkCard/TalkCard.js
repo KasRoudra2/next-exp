@@ -1,22 +1,22 @@
 import React from "react";
-import "./TalkCard.css";
+import styles from "./TalkCard.module.css";
 
 const TalkCard = (props) => {
   const { theme, talkDetails } = props;
   return (
     <div>
-      <div className="container">
+      <div className={styles.container}>
         <div
-          className="rectangle"
+          className={styles.rectangle}
         >
-          <div className="diagonal-fill"></div>
-          <div className="talk-card-title" style={{ color: theme.text }}>{talkDetails.title}</div>
-          <p className="talk-card-subtitle" style={{ color: theme.secondaryText }}>{talkDetails.subtitle}</p>
-          <div className="card-footer-button-div">
-            <a href={talkDetails.slides_url} target="_" className="talk-button">
+          <div className={styles.diagonalFill}></div>
+          <div className={styles.talkCardTitle} style={{ color: theme.text }}>{talkDetails.title}</div>
+          <p className={styles.talkCardSubtitle} style={{ color: theme.secondaryText }}>{talkDetails.subtitle}</p>
+          <div className={styles.cardFooterButtonDiv}>
+            <a href={talkDetails.slides_url} target="_" className={styles.talkButton}>
               Slides
             </a>
-            <a href={talkDetails.event_url} target="_" className="talk-button">
+            <a href={talkDetails.event_url} target="_" className={styles.talkButton}>
               Event
             </a>
           </div>

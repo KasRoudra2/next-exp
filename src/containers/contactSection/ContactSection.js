@@ -1,38 +1,39 @@
+import Image from "next/image";
 import React from "react";
 import {Fade} from "react-reveal";
 import { greeting, contactPageData } from "../../portfolio.js";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import "./ContactSection.css";
+import styles from "./ContactSection.module.css";
 
 const ContactSection = (props) => {
      const theme = props.theme;
      const contactSection = contactPageData.contactSection;
      return(
-        <div className="basic-contact">
+        <div className={styles.basicContact}>
           <Fade bottom duration={1000} distance="40px">
-            <div className="contact-heading-div">
-              <div className="contact-heading-img-div">
-                <img
+            <div className={styles.contactHeadingDiv}>
+              <div className={styles.contactHeadingImgDiv}>
+                <Image
                   src={require(`../../assets/images/${contactSection["profile_image_path"]}`)}
                   alt=""
                 />
               </div>
-              <div className="contact-heading-text-div">
+              <div className={styles.contactHeadingTextDiv}>
                 <h1
-                  className="contact-heading-text"
+                  className={styles.contactHeadingText}
                   style={{ color: theme.text }}
                 >
                   {contactSection["title"]}
                 </h1>
                 <p
-                  className="contact-header-detail-text subTitle"
+                  className={styles.contactHeaderDetailText + " " + styles.subTitle}
                   style={{ color: theme.secondaryText }}
                 >
                   {contactSection["description"]}
                 </p>
                 <SocialMedia theme={theme} />
-                <div className="resume-btn-div">
+                <div className={styles.resumeBtnDiv}>
                   <Button
                     text="See My Resume"
                     newTab={true}

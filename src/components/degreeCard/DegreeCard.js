@@ -1,14 +1,15 @@
+import Image from "next/image";
 import React from "react";
 import { Fade, Flip } from "react-reveal";
-import "./DegreeCard.css";
+import styles from "./DegreeCard.module.css";
 
 const DegreeCard = (props) => {
     const { degree, theme } = props;
     return (
-      <div className="degree-card">
+      <div className={styles.degreeCard}>
         <Flip left duration={2000}>
-          <div className="degree-card-img">
-            <img
+          <div className={styles.degreeCardImg}>
+            <Image
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
@@ -20,29 +21,29 @@ const DegreeCard = (props) => {
           </div>
         </Flip>
         <Fade right duration={2000} distance="40px">
-          <div className="card-body">
+          <div className={styles.cardBody}>
             <div
-              className="body-header"
+              className={styles.bodyHeader}
               style={{ backgroundColor: theme.headerColor }}
             >
-              <div className="body-header-title">
-                <h2 className="card-title" style={{ color: theme.text }}>
+              <div className={styles.bodyHeaderTitle}>
+                <h2 className={styles.cardTitle} style={{ color: theme.text }}>
                   {degree.title}
                 </h2>
-                <h3 className="card-subtitle" style={{ color: theme.text }}>
+                <h3 className={styles.cardSubtitle} style={{ color: theme.text }}>
                   {degree.subtitle}
                 </h3>
               </div>
-              <div className="body-header-duration">
-                <h3 className="duration" style={{ color: theme.text }}>
+              <div className={styles.bodyHeaderDuration}>
+                <h3 className={styles.duration} style={{ color: theme.text }}>
                   {degree.duration}
                 </h3>
               </div>
             </div>
-            <div className="body-content">
+            <div className={styles.bodyContent}>
               {degree.descriptions.map((sentence) => {
                 return (
-                  <p className="content-list" style={{ color: theme.text }} key={sentence} >
+                  <p className={styles.contentList} style={{ color: theme.text }} key={sentence} >
                     {sentence}
                   </p>
                 );
@@ -53,10 +54,10 @@ const DegreeCard = (props) => {
                 rel="noopener noreferrer"
               >
                 <div
-                  className="visit-btn"
+                  className={styles.visitBtn}
                   style={{ backgroundColor: theme.headerColor }}
                 >
-                  <p className="btn-text" style={{ color: theme.text }}>
+                  <p className={styles.btnText} style={{ color: theme.text }}>
                     Visit Website
                   </p>
                 </div>

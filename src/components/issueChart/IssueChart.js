@@ -3,7 +3,7 @@ import { Doughnut } from "react-chartjs-2";
 import { Fade } from "react-reveal";
 import IssueData from "../../shared/opensource/issues.json";
 import {openSource} from "../../portfolio";
-import "./IssueChart.css";
+import styles from "./IssueChart.module.css";
 
 const IssueChart = (props) => {
     const theme = props.theme;
@@ -27,9 +27,9 @@ const IssueChart = (props) => {
     }
     
     return (
-      <div className="issue-chart">
+      <div className={styles.issueChart}>
         <Fade bottom duration={2000} distance="20px">
-          <h2 className="issue-chart-header" style={{color:theme.secondaryText}}>Issue Distribution</h2>
+          <h2 className={styles.issueChartHeader} style={{color:theme.secondaryText}}>Issue Distribution</h2>
         </Fade>
         <Doughnut
           data={data}
