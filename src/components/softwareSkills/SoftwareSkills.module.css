@@ -1,0 +1,23 @@
+.devIcons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.softwareSkillInline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: "Google Sans Regular";
+}
+
+.softwareSkillInline > i {
+  color: #868e96;
+}
+
+.softwareSkillInline > i:hover {
+  color: #645beb;
+}

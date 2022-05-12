@@ -1,0 +1,20 @@
+.prChart {
+  width: 100%;
+  text-align: center;
+}
+
+canvas {
+  margin: 0 auto;
+}
+
+.prChart-header {
+  font-family: "Google Sans Regular";
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .prChart-header {
+    font-size: 20px;
+  }
+}

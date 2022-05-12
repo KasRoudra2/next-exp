@@ -1,0 +1,195 @@
+.contactMain {
+  width: 100%;
+}
+
+.basicContact {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.contactMessage {
+	text-align: center;
+}	
+.contactHeadingDiv {
+  display: flex;
+}
+
+.blogHeadingDiv {
+  display: flex;
+}
+
+.addressHeadingDiv {
+  display: flex;
+  margin-top: 80px;
+}
+
+.blogHeadingDiv > * {
+  flex: 1;
+}
+
+.contactHeadingDiv > * {
+  flex: 1;
+}
+
+.addressHeadingDiv > * {
+  flex: 1;
+}
+
+.contactHeadingImgDiv {
+  align-items: center;
+  justify-content: center;
+}
+
+.blogHeadingImgDiv {
+  align-items: center;
+  justify-content: center;
+}
+
+.contactHeadingTextDiv {
+  text-align: center;
+}
+
+.blogHeadingTextDiv {
+  text-align: center;
+}
+
+.addressHeadingTextDiv {
+  text-align: center;
+}
+
+.contactHeadingImgDiv > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.blogHeadingImgDiv > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.contactHeadingText {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.blogHeadingText {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.addressHeadingText {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contactHeaderDetailText {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.blogHeaderDetailText {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.resumeBtnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.blogsiteBtnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.addressBtnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+@media (max-width: 1380px) {
+  .contactHeadingText {
+    font-size: 50px;
+    margin-top: 60px;
+  }
+
+  .blogHeadingText {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactHeadingText {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+
+  .blogHeadingText {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+
+  .addressHeadingText {
+    font-size: 20px;
+  }
+
+  .blogHeadingDiv {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+  }
+
+  .addressHeadingDiv {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .blogHeadingTextDiv {
+    margin-top: 40px;
+  }
+
+  .addressHeadingTextDiv {
+    margin-top: 40px;
+  }
+
+  .contactHeadingDiv {
+    flex-direction: column;
+  }
+
+  .contactHeaderDetailText {
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .blogHeaderDetailText {
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+}

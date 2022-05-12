@@ -1,0 +1,27 @@
+.talksMain{
+	overflow: hidden;
+}	
+.talkHeaderTitle {
+  text-align: center;	
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 0px;
+}
+
+.talkHeaderSubtitle {
+	margin-top: 40px;
+	font-size: 20px;
+	margin-bottom: -20px;
+	text-align:center;
+}
+@media (max-width: 768px) {
+  .talkHeaderTitle {
+    font-size: 30px;
+    text-align: center;
+  }
+  .talkHeaderSubtitle {
+    font-size: 15px;
+    line-height: normal;
+    text-align: center;
+  }
+}

@@ -1,0 +1,137 @@
+.techMain{
+	margin-bottom: 0px;
+	overflow: hidden;
+}	
+
+.techstackHeading {
+	text-align: center;
+  font-size: 45px;
+  font-weight: 400;
+  font-family: "Google Sans Regular";
+  line-height: normal;
+  margin-bottom: 35px;
+}
+
+.skillsImageDiv {
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.meter {
+  height: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  background: #ddddee;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color:  #aaa5ff;
+  position: relative;
+  overflow: hidden;
+}
+.skill {
+  line-height: 3.5vw;
+}
+.skillBars {
+  font-size: 28px;
+  width: 40%;
+}
+.skillsContainer {
+  display: flex;
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+.skillsContainer > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.skillsImage > img {
+  margin-left: 80px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Media Query */
+
+@media (max-width: 1456px) {
+  .skillsBar {
+    line-height: 4rem;
+  }
+  .skillsImage {
+    display: none;
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsContainer {
+    flex-direction: column;
+  }
+  .skillsBar {
+    line-height: 3rem;
+    margin: 20px;
+  }
+  .skillsImage {
+    display: none;
+    order: 2;
+  }
+}
+
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .techstackHeading {
+    font-size: 40px;
+  }
+  .skillsHeader {
+    font-size: 50px;
+  }
+  /* .skillsImageDiv > img {
+    margin-top: 0px;
+  } */
+}
+@media (max-width: 768px) {
+  .techstackHeading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .skillsHeader {
+    font-size: 30px;
+  }
+  .greetingTextP {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .skillsMainDiv {
+    flex-direction: column;
+  }
+  .skillsTextDiv {
+    margin-left: 0px;
+    margin: 20px;
+  }
+  .skillsText {
+    font-size: 16px;
+  }
+  .skillsText-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .skillsImageDiv {
+    /* display: none; */
+    order: 2;
+  }
+  .skillsImageDiv > * {
+    margin-top: 0px;
+  }
+}

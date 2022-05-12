@@ -1,0 +1,36 @@
+.osChartsHeader {
+  font-size: 40px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.osChartsBodyDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  /* table-layout: fixed; */
+  width: 100%;
+}
+/* 
+.tbItem {
+    display: table-cell;
+} */
+
+@media (max-width: 1380px) {
+  .osChartsHeader {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .osChartsHeader {
+    font-size: 25px;
+  }
+
+  .osChartsBodyDiv {
+    flex-direction: column;
+  }
+}

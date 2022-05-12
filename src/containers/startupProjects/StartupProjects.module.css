@@ -1,0 +1,135 @@
+.startupMain{
+	overflow: hidden;
+}	
+.startupProjectsMain {
+  display: flex;
+}
+
+.startupProjectsMain > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.starupProjectImage > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectCardHead {
+  color: rgb(36, 41, 46);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0px;
+}
+
+.startupProjectText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectCardDescription {
+  color: rgb(88, 96, 105);
+}
+.saayaHealthDiv,
+.nextuDiv {
+  cursor: pointer;
+}
+
+
+.cardImage {
+  max-width: 100%;
+  height: auto;
+  width: 250px;
+}
+.cardTitle {
+  color: #000123;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 15px 0 0 0;
+}
+.cardSubtitle {
+  color: #666666;
+  font-size: 17px;
+  line-height: 1.5rem;
+}
+.projectsTitle {
+	text-align: center;
+}
+
+.projectSubtitle{
+	text-align: center;
+}
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.397);
+  justify-content: center;
+}
+.projectCard-light {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.projectCard-dark {
+  box-shadow: 0px 10px 30px -15px #d9dbdf;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.projectDetail {
+  text-align: center;
+}
+.projectCard-light:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+.projectCard-dark:hover {
+  box-shadow: 0px 20px 30px -10px #d9dbdf;
+}
+.projectImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem 1rem;
+}
+
+.projectCard-footer span.projectTag {
+  background: #55198b;
+  color: #f5f2f4;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0 0.75em;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+@media (max-width: 768px) {
+  .projectSubtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .starupProjectImage {
+    display: none;
+  }
+}

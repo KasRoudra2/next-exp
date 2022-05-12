@@ -1,0 +1,20 @@
+.organizationsHeader {
+  font-size: 40px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1380px) {
+  .organizationsHeader {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .organizationsHeader {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,127 @@
+.aboutMain{
+	overflow: hidden;
+}	
+.blogHeader{
+	margin-top: 17px;
+}	
+.profileImage {
+  border-radius: 50%;
+  border: 0.5rem solid #6c63ff;
+  margin-left: auto;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 30px 30px -30px;
+  transition: all 0.3s ease-out;
+}
+
+.profileImage:hover {
+  box-shadow: none;
+}
+
+.profTitle {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.locationDiv {
+	font-size:12px;
+  text-shadow:  #ffebcd;
+}
+.locIm{
+	width: 18px;
+}	
+.oppDiv {
+  padding-bottom: 1rem;
+}
+
+.row {
+  /*display: flex;*/
+}
+
+.mainContentProfile {
+  flex: 80%;
+}
+
+.imageContentProfile {
+  text-align: center;
+  flex: 20%;
+  max-width: 100%;
+  height: auto;
+}
+
+.bioText {
+  line-height: 30px;
+  font-size: 22px;
+}
+
+.descProf {
+  line-height: 45px;
+  font-size: 19px;
+  display: inline;
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    /*display: flex;
+    flex-direction: column;*/
+    margin-bottom: -20px;
+  }
+
+  .mainContentProfile {
+    text-align: center;
+    order: 2;
+  }
+  .blogSub{
+  	margin-bottom: 0px;
+  	margin-top: -15px;
+  }
+  .bioText {
+    font-size: 16px;
+  }
+
+  .imageContentProfile {
+    margin-left: auto;
+    margin-right: auto;
+    order: 1;
+  }
+
+  .descProf {
+  	width: 16px;
+    line-height: 30px;
+    font-size: 16px;
+    flex-direction:
+  }
+
+  .profileImage {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .profileImage:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 50px 50px -50px;
+    transition: 0.3s ease-out;
+  }
+
+  .profTitle {
+    padding-bottom: 1rem;
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px){
+	.blogHeader{
+	    font-size: 22px;	
+	}	
+	.locIm{
+		width: 21px;
+ 	}
+ 	.descProf{
+ 	    font-size: 20px;
+ 	}
+}	

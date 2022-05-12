@@ -1,0 +1,28 @@
+.certsHeader {
+  font-size: 40px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+.certsBodyDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1380px) {
+  .certsHeader {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certsBodyDiv {
+    flex-direction: column;
+  }
+
+  .certsHeader {
+    font-size: 30px;
+  }
+}

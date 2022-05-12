@@ -1,0 +1,153 @@
+.degreeCard {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTitle {
+  font-family: "Google Sans Medium";
+  font-size: 23px;
+  /* color: #000000; */
+}
+
+.cardSubtitle {
+  font-family: "Google Sans Medium";
+  font-size: 18px;
+  /* color: #000000; */
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.degreeCard-img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid #d9dbdf;
+  /* background-color: #6c63ff; */
+  /* background: transparent; */
+  box-shadow: 5px 5px 5px #d9dbdf;
+}
+
+.bodyHeader {
+  max-width: inherit;
+  display: flex;
+  /* width: 100%; */
+  /* background-color:#6c63ff99; */
+  border-radius: 7px 7px 0px 0px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.bodyHeader-title {
+  align-items: flex-start;
+  width: 80%;
+}
+
+.bodyHeader.duration {
+  width: 20%;
+}
+.duration {
+  font-family: "Google Sans Regular";
+  font-size: 16px;
+  /* color: #212121; */
+  padding-right: 10px;
+  float: right;
+}
+
+.bodyContent {
+  max-width: inherit;
+  /* width: 100%; */
+  border-radius: 0px 0px 7px 7px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  /*box-shadow: 5px 5px 5px #d3d3d3; */
+}
+
+.contentList {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Google Sans Regular";
+}
+
+.cardBody {
+  /* background-color: #00FF00; */
+  border-bottom: 1px solid #d9dbdf;
+  border-left: 1px solid #d9dbdf;
+  border-right: 1px solid #d9dbdf;
+  border-radius: 7px;
+  width: 90%;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #d9dbdf;
+}
+
+.visitBtn {
+  /* background-color: #6c63ff99; */
+  /*display: inline-block;*/
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  float: right;
+}
+
+
+.btnText {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Google Sans Regular";
+  /* color: #000000; */
+}
+
+@media (max-width: 1380px) {
+	.cardTitle{
+		font-size: 22px;
+	}
+	.cardSubtitle{
+		font-size: 20px;
+	}	
+}
+
+@media (max-width: 768px) {
+  .degreeCard {
+    flex-direction: column;
+  }
+
+  .bodyHeader {
+    flex-direction: column;
+  }
+
+  .bodyHeader-title {
+    width: 100%;
+  }
+
+  .bodyHeader.duration {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .duration {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+  }
+
+  .cardImg {
+    width: 200px;
+  }
+
+  .cardBody {
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardSubtitle {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,50 @@
+.devIconsOrgs {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.organizationsImg {
+  width: 100px;
+  height: auto;
+}
+
+.organizationsInline {
+  display: inline-block;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  /* border: 1px solid #000000; */
+  font-family: "Google Sans Regular";
+}
+
+.organizationsInline:hover {
+  -moz-transform: translate(0px, -5px);
+  -ms-transform: translate(0px, -5px);
+  -o-transform: translate(0px, -5px);
+  -webkit-transform: translate(0px, -5px);
+  transform: translate(0px, -5px);
+}
+
+@media (max-width: 1380px) {
+}
+
+@media (max-width: 768px) {
+  .organizationsImg {
+    width: 60px;
+  }
+
+  .devIconsOrgs {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .organizationsInline {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}

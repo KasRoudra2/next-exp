@@ -1,0 +1,13 @@
+.experienceAccord {
+  margin: 50px;
+}
+
+.accordPanel {
+  font-family: "Google Sans Regular";
+}
+
+@media (max-width: 768px) {
+  .experienceAccord {
+    margin: 20px;
+  }
+}

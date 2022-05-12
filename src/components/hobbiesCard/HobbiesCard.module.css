@@ -1,0 +1,50 @@
+.hobbiesCard{
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.hobbiesCard-title{
+    font-size: 35px;
+    margin-top: 20px;
+}
+.hobbiesCard-subtitle{
+    margin-top:12px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+@media(min-width: 768px){
+    .hobbiesImage{
+      width: 60%;
+    }
+    .hobbiesData{
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+    .hobbiesData > * {
+      flex: 1;
+      margin-bottom: 30px;
+      margin-left: 30px;
+    }
+
+    .hobbiesImage > * {
+      max-width: 60%;
+      height: auto;
+      margin-top: 100px;
+    }
+}
+@media(max-width: 768px){
+    .hobbiesCard-title{
+        font-size: 27px;
+    }
+    .hobbiesCard-subtitle{
+        font-size: 18px;
+    }
+    .hobbiesImage{
+        width: 80%;
+    }
+    
+}
